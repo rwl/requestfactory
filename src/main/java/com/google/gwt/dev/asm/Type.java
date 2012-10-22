@@ -35,7 +35,7 @@ import java.lang.reflect.Method;
 /**
  * A Java type. This class can be used to make it easier to manipulate type and
  * method descriptors.
- * 
+ *
  * @author Eric Bruneton
  * @author Chris Nokleberg
  */
@@ -174,7 +174,7 @@ public class Type {
 
     /**
      * Constructs a primitive type.
-     * 
+     *
      * @param sort the sort of the primitive type to be constructed.
      */
     private Type(final int sort) {
@@ -183,7 +183,7 @@ public class Type {
 
     /**
      * Constructs a reference type.
-     * 
+     *
      * @param sort the sort of the reference type to be constructed.
      * @param buf a buffer containing the descriptor of the previous type.
      * @param off the offset of this descriptor in the previous buffer.
@@ -199,7 +199,7 @@ public class Type {
 
     /**
      * Returns the Java type corresponding to the given type descriptor.
-     * 
+     *
      * @param typeDescriptor a type descriptor.
      * @return the Java type corresponding to the given type descriptor.
      */
@@ -209,7 +209,7 @@ public class Type {
 
     /**
      * Returns the Java type corresponding to the given internal name.
-     * 
+     *
      * @param internalName an internal name.
      * @return the Java type corresponding to the given internal name.
      */
@@ -220,7 +220,7 @@ public class Type {
 
     /**
      * Returns the Java type corresponding to the given class.
-     * 
+     *
      * @param c a class.
      * @return the Java type corresponding to the given class.
      */
@@ -253,7 +253,7 @@ public class Type {
     /**
      * Returns the Java types corresponding to the argument types of the given
      * method descriptor.
-     * 
+     *
      * @param methodDescriptor a method descriptor.
      * @return the Java types corresponding to the argument types of the given
      *         method descriptor.
@@ -288,7 +288,7 @@ public class Type {
     /**
      * Returns the Java types corresponding to the argument types of the given
      * method.
-     * 
+     *
      * @param method a method.
      * @return the Java types corresponding to the argument types of the given
      *         method.
@@ -305,7 +305,7 @@ public class Type {
     /**
      * Returns the Java type corresponding to the return type of the given
      * method descriptor.
-     * 
+     *
      * @param methodDescriptor a method descriptor.
      * @return the Java type corresponding to the return type of the given
      *         method descriptor.
@@ -318,7 +318,7 @@ public class Type {
     /**
      * Returns the Java type corresponding to the return type of the given
      * method.
-     * 
+     *
      * @param method a method.
      * @return the Java type corresponding to the return type of the given
      *         method.
@@ -329,7 +329,7 @@ public class Type {
 
     /**
      * Returns the Java type corresponding to the given type descriptor.
-     * 
+     *
      * @param buf a buffer containing a type descriptor.
      * @param off the offset of this descriptor in the previous buffer.
      * @return the Java type corresponding to the given type descriptor.
@@ -383,7 +383,7 @@ public class Type {
 
     /**
      * Returns the sort of this Java type.
-     * 
+     *
      * @return {@link #VOID VOID}, {@link #BOOLEAN BOOLEAN},
      *         {@link #CHAR CHAR}, {@link #BYTE BYTE}, {@link #SHORT SHORT},
      *         {@link #INT INT}, {@link #FLOAT FLOAT}, {@link #LONG LONG},
@@ -397,7 +397,7 @@ public class Type {
     /**
      * Returns the number of dimensions of this array type. This method should
      * only be used for an array type.
-     * 
+     *
      * @return the number of dimensions of this array type.
      */
     public int getDimensions() {
@@ -411,7 +411,7 @@ public class Type {
     /**
      * Returns the type of the elements of this array type. This method should
      * only be used for an array type.
-     * 
+     *
      * @return Returns the type of the elements of this array type.
      */
     public Type getElementType() {
@@ -420,7 +420,7 @@ public class Type {
 
     /**
      * Returns the name of the class corresponding to this type.
-     * 
+     *
      * @return the fully qualified name of the class corresponding to this type.
      */
     public String getClassName() {
@@ -460,7 +460,7 @@ public class Type {
      * array type. The internal name of a class is its fully qualified name (as
      * returned by Class.getName(), where '.' are replaced by '/'. This method
      * should only be used for an object or array type.
-     * 
+     *
      * @return the internal name of the class corresponding to this object type.
      */
     public String getInternalName() {
@@ -473,7 +473,7 @@ public class Type {
 
     /**
      * Returns the descriptor corresponding to this Java type.
-     * 
+     *
      * @return the descriptor corresponding to this Java type.
      */
     public String getDescriptor() {
@@ -485,7 +485,7 @@ public class Type {
     /**
      * Returns the descriptor corresponding to the given argument and return
      * types.
-     * 
+     *
      * @param returnType the return type of the method.
      * @param argumentTypes the argument types of the method.
      * @return the descriptor corresponding to the given argument and return
@@ -508,7 +508,7 @@ public class Type {
     /**
      * Appends the descriptor corresponding to this Java type to the given
      * string buffer.
-     * 
+     *
      * @param buf the string buffer to which the descriptor must be appended.
      */
     private void getDescriptor(final StringBuffer buf) {
@@ -560,7 +560,7 @@ public class Type {
      * Returns the internal name of the given class. The internal name of a
      * class is its fully qualified name, as returned by Class.getName(), where
      * '.' are replaced by '/'.
-     * 
+     *
      * @param c an object or array class.
      * @return the internal name of the given class.
      */
@@ -570,7 +570,7 @@ public class Type {
 
     /**
      * Returns the descriptor corresponding to the given Java type.
-     * 
+     *
      * @param c an object class, a primitive class or an array class.
      * @return the descriptor corresponding to the given class.
      */
@@ -582,7 +582,7 @@ public class Type {
 
     /**
      * Returns the descriptor corresponding to the given constructor.
-     * 
+     *
      * @param c a {@link Constructor Constructor} object.
      * @return the descriptor of the given constructor.
      */
@@ -598,7 +598,7 @@ public class Type {
 
     /**
      * Returns the descriptor corresponding to the given method.
-     * 
+     *
      * @param m a {@link Method Method} object.
      * @return the descriptor of the given method.
      */
@@ -616,7 +616,7 @@ public class Type {
 
     /**
      * Appends the descriptor of the given class to the given string buffer.
-     * 
+     *
      * @param buf the string buffer to which the descriptor must be appended.
      * @param c the class whose descriptor must be computed.
      */
@@ -669,7 +669,7 @@ public class Type {
 
     /**
      * Returns the size of values of this type.
-     * 
+     *
      * @return the size of values of this type, i.e., 2 for <tt>long</tt> and
      *         <tt>double</tt>, and 1 otherwise.
      */
@@ -679,7 +679,7 @@ public class Type {
 
     /**
      * Returns a JVM instruction opcode adapted to this Java type.
-     * 
+     *
      * @param opcode a JVM instruction opcode. This opcode must be one of ILOAD,
      *        ISTORE, IALOAD, IASTORE, IADD, ISUB, IMUL, IDIV, IREM, INEG, ISHL,
      *        ISHR, IUSHR, IAND, IOR, IXOR and IRETURN.
@@ -687,7 +687,7 @@ public class Type {
      *         this Java type. For example, if this type is <tt>float</tt> and
      *         <tt>opcode</tt> is IRETURN, this method returns FRETURN.
      */
-    public int getOpcode(final int opcode) {
+    /*public int getOpcode(final int opcode) {
         if (opcode == Opcodes.IALOAD || opcode == Opcodes.IASTORE) {
             switch (sort) {
                 case BOOLEAN:
@@ -732,7 +732,7 @@ public class Type {
                     return opcode + 4;
             }
         }
-    }
+    }*/
 
     // ------------------------------------------------------------------------
     // Equals, hashCode and toString
@@ -740,7 +740,7 @@ public class Type {
 
     /**
      * Tests if the given object is equal to this type.
-     * 
+     *
      * @param o the object to be compared to this type.
      * @return <tt>true</tt> if the given object is equal to this type.
      */
@@ -770,7 +770,7 @@ public class Type {
 
     /**
      * Returns a hash code value for this type.
-     * 
+     *
      * @return a hash code value for this type.
      */
     public int hashCode() {
@@ -785,7 +785,7 @@ public class Type {
 
     /**
      * Returns a string representation of this type.
-     * 
+     *
      * @return the descriptor of this type.
      */
     public String toString() {
