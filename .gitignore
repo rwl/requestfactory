@@ -1,0 +1,9 @@
+.project
+.classpath
+.settings
+
+/requestfactory-server/target/*
+/requestfactory-client/target/*
+
+/requestfactory-client/src/main/objc/*
+
