@@ -1,12 +1,12 @@
 /*
  * Copyright 2010 Google Inc.
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
- * 
+ *
  * http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
@@ -238,7 +238,7 @@ public class ValueCodex {
     /**
      * Determines whether or not the Type can handle the given value via
      * upcasting semantics.
-     * 
+     *
      * @param value a value Object
      */
     public boolean canUpcast(Object value) {
@@ -279,7 +279,7 @@ public class ValueCodex {
 
   /**
    * Returns true if ValueCodex can operate on values of the given type.
-   * 
+   *
    * @param clazz a Class object
    * @return {@code true} if the given object type can be decoded
    */
@@ -288,7 +288,8 @@ public class ValueCodex {
       return true;
     }
     // Use other platform-specific tests
-    return ValueCodexHelper.canDecode(clazz);
+//    return ValueCodexHelper.canDecode(clazz);
+    return false;
   }
 
   @SuppressWarnings("unchecked")
@@ -301,7 +302,7 @@ public class ValueCodex {
 
   /**
    * No callers in GWT codebase.
-   * 
+   *
    * @deprecated use {@link #decode(Class, Splittable)} instead.
    * @throws UnsupportedOperationException
    */
