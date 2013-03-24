@@ -118,7 +118,8 @@ class InProcessRequestContext extends AbstractRequestContext {
         final String[] parameterNames = args == null ? new String[0] : new String[args.length];
         Annotation[][] parameterAnnotations = method.getParameterAnnotations();
         parameter : for (int i = 0, j = parameterAnnotations.length; i < j; i++) {
-          for (Annotation annotation : parameterAnnotations[i]) {
+          for (int k = 0; k < parameterAnnotations[i].length; k++) {
+            Annotation annotation = parameterAnnotations[i][k];
             if (PropertyName.class.equals(annotation.annotationType())) {
               parameterNames[i] = ((PropertyName) annotation).value();
               continue parameter;

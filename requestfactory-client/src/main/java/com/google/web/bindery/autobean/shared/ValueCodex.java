@@ -210,7 +210,7 @@ public class ValueCodex {
         return (Splittable) value;
       }
     },
-    VOID(Void.class, void.class, null) {
+    VOID(Void.class, void.class) {
       @Override
       public Void decode(Class<?> clazz, Splittable value) {
         return null;
@@ -227,6 +227,10 @@ public class ValueCodex {
 
     Type(Class<?> objectType) {
       this(objectType, null, null);
+    }
+
+    Type(Class<?> objectType, Class<?> primitiveType) {
+        this(objectType, primitiveType, null);
     }
 
     Type(Class<?> objectType, Class<?> primitiveType, Object defaultValue) {
